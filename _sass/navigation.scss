@@ -1,0 +1,122 @@
+.nav-open {
+	header {
+		background: $html-background-color;
+		z-index: 10;
+
+		@media #{$mid-point} {
+			background: none;
+		}
+	}
+
+	nav {
+		margin: 20px 0 0 0;
+		border: 0;
+
+		a {
+			font-family: 'Josefin Sans', sans-serif;
+	    font-weight: 400;
+			font-size: 1em;
+			color: #fff;
+			display: block;
+		}
+
+		@media #{$mid-point} {
+			border: 0;
+			padding: 0 20px;
+
+			a {
+				display: inline;
+			}
+		}
+	}
+}
+
+nav {
+
+	width: 100%;
+
+	ul {
+		margin: 0;
+		padding: 0;
+	}
+
+	li {
+		font-family: 'Josefin Sans', sans-serif;
+	  font-weight: 400;
+		display: block;
+	}
+
+	a {
+		color: #FFF;
+		font-size: 1em;
+	}
+
+	@media #{$mid-point} {
+		text-align: right;
+		position: absolute;
+		top: 0;
+		right: 0;
+		padding: 0 20px;
+
+		li {
+			display: inline-block;
+		}
+	}
+
+	a {
+		margin: 0 3px;
+		padding: 20px 10px;
+		color: #fff;
+		transition: 0.25s ease-in-out;
+		display: none;
+		font-size: 1em;
+
+		@media #{$mid-point} {
+			display: block;
+			padding: 10px;
+		}
+
+		&.nav-toggle {
+			display: inline;
+			position: absolute;
+			right: 10px;
+			top: -22px;
+			font-size: 1.9em;
+			border: 0;
+
+			@media #{$mid-point} {
+				display: none;
+			}
+
+			&:hover {
+				border: none;
+			}
+		}
+	}
+
+	a:hover {
+		color: $brand-color;
+		@media #{$mid-point} {
+			border: none;
+			transition: 0.25s ease-in-out;
+			display: block;
+			padding: 10px;
+		}
+	}
+
+	@media #{$mid-point} {
+		a.highlight {
+			border: 1px #ccc solid;
+			border-radius: 5px;
+
+			&:hover {
+				background: #fff;
+				color: $brand-color;
+			}
+		}
+	}
+
+	a.active {
+		color: $brand-color;
+	}
+}

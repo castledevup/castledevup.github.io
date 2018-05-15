@@ -1,0 +1,17 @@
+<p class="post-details">
+
+	{% if include.post.author_staff_member %}
+  Publicado por {{include.post.author_staff_member}}
+  {% endif %}
+
+
+	{% if include.post.date %}
+	<span class="post-date">em {{ include.post.date | date: "%m/%d/%Y" }}</span>
+	{% endif %}
+</p>
+
+{% for category in include.post.categories %}
+	<span class="blog-filter">
+		<a href="{{ site.baseurl }}/category/{{ category | slugify }}/">{{ category | capitalize }}</a>
+	</span>
+{% endfor %}

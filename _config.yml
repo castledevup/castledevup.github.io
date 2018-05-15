@@ -1,0 +1,72 @@
+title: Agência CastleDev
+url: "https://www.castledev.tk"
+baseurl: ""
+google_analytics_key: UA-99071986-2
+google_maps_javascript_api_key: AIzaSyDvak0WH0J5VhwJQHcTkEqCOCP8-Kr8V7E
+disqus_shortname: http-castledev-tk
+
+# Default description in social shares for the jekyll-seo-tag gem
+description: Criação Web e Marketing Digital
+
+# Author details for the jekyll-seo-tag gem
+author:
+  name: Agência CastleDev
+  email: castledevup@gmail.com
+  twitter: castle_dev
+
+# Social details for the jekyll-seo-tag gem
+social:
+  name: Agência CastleDev
+  links:
+    - https://github.com/castledevup
+
+collections:
+  staff_members:
+    output: false
+  clients:
+    output: true
+
+paginate: 3
+paginate_path: "/blog/:num/"
+permalink: pretty
+
+jekyll-archives:
+  enabled:
+    - "categories"
+
+gems:
+  - "jekyll-feed"
+  - "jekyll-seo-tag"
+  - "jekyll-paginate"
+  - "jekyll-archives"
+
+defaults:
+  - scope:
+      path: ""
+      type: "posts"
+    values:
+      layout: "post"
+  - scope:
+      path: ""
+      type: "clients"
+    values:
+      layout: "client"
+  - scope:
+      path: ""
+      type: "pages"
+    values:
+      layout: "page"
+  - scope:
+      path: "index.html"
+      type: "pages"
+    values:
+      layout: "default"
+
+# -----------
+# CloudCannon
+
+social_icons:
+  - Facebook
+  - Instagram
+  - LinkedIn
+  - Twitter
